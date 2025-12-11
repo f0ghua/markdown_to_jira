@@ -1,13 +1,16 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
 
   "name": "Markdown to JIRA",
   "description": "Converts Markdown to JIRA wiki syntax",
 
   "version": "0.1.0",
   "permissions": ["contextMenus", "storage", "tabs"],
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "background": {
-    "scripts": ["background.js"]
+    "service_worker": "background.js"
   },
   "icons": {
     "128": "icon_128x128.png"
@@ -23,6 +26,6 @@
   }],
   "options_ui": {
     "page": "options.html",
-    "chrome_style": true
+    "open_in_tab": true
   }
 }
